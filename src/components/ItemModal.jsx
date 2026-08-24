@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ItemModal = ({isopen , onClose , item}) => {
-    console.log(isopen,item,"IOH(U")
+    
     if (!isopen || !item){
         return null;
     }
