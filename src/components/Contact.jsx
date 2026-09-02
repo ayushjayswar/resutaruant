@@ -3,6 +3,7 @@ import { FaLocationArrow, FaPhoneAlt } from "react-icons/fa";
 import { MdEmail, MdTimer } from "react-icons/md";
 import InputField from './InputField';
 import Textarea from "../components/Textarea";
+import { sendContactEmail } from '../services/emailService';
 
 const Contact = () => {
 
@@ -12,6 +13,8 @@ const Contact = () => {
         message: '',
         subject: ''
     });
+
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -25,14 +28,30 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log(FormData);
+        if (!FormData.fullname || !FormData.email || !FormData.subject || !FormData.message) {
+            alert("Please fill all fields");
+            return;
+        }
 
-        setFormData({
-            fullname: '',
-            email: '',
-            message: '',
-            subject: ''
-        })
+        setLoading(true);
+
+        sendContactEmail(FormData)
+            .then(() => {
+                alert('Message sent successfully!');
+                setFormData({
+                    fullname: '',
+                    email: '',
+                    message: '',
+                    subject: ''
+                })
+            })
+            .catch((err) => {
+                console.error(err);
+                alert('Failed to send. Try again.');
+            })
+            .finally(() => {
+                setLoading(false);
+            });
     }
 
     return (
@@ -219,8 +238,14 @@ const Contact = () => {
 
                                 {/* Send Button */}
 
-                                <button className="group relative overflow-hidden px-8 py-3 rounded-lg bg-red-600 border-2 border-red-700 inline-flex items-center justify-center text-sm font-bold text-black shadow-sm gap-x-2 transition-all duration-300">
-                                    <span className="relative z-10">Send</span>
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="group relative overflow-hidden px-8 py-3 rounded-lg bg-red-600 border-2 border-red-700 inline-flex items-center justify-center text-sm font-bold text-black shadow-sm gap-x-2 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+                                >
+                                    <span className="relative z-10">
+                                        {loading ? "Sending..." : "Send"}
+                                    </span>
                                     <span className="absolute w-0 h-0 rounded-full bg-green-600 group-hover:w-[300%] group-hover:h-[500%] transition-all duration-700"></span>
                                 </button>
 
