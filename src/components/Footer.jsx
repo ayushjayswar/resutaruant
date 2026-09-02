@@ -18,7 +18,7 @@ const Footer = () => {
                     </div>
 
                     {/* second */}
-                    <div className='text-center'>
+                    <div >
                         <h1 className='text-xl  text-white font-semibold mb-4'>Quick Link</h1>
 
                         <ul className='font-semibold text-xl  text-white'>
