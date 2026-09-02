@@ -219,7 +219,7 @@ const Contact = () => {
 
                                 {/* Send Button */}
 
-                                <button className="relative px-8 py-3 rounded-lg bg-red-600 isolation-auto z-10 border-2 border-red-700 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full hover:text-black before:-right-full before:hover:right-0 before:rounded-full before:bg-red-700 before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 inline-flex items-center justify-center text-sm font-bold text-black shadow-sm gap-x-2 disabled:opacity-50 disabled:pointer-events-none">
+                                <button className="relative px-8 py-3 rounded-lg bg-red-600 isolation-auto z-10 border-2 border-red-700 before:absolute before:w-full before:transition-all before:duration-700 before:-right-full before:hover:right-0 before:rounded-full before:bg-red-700 before:z-[-1] before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 inline-flex items-center justify-center text-sm font-bold text-black shadow-sm gap-x-2 disabled:opacity-50 disabled:pointer-events-none">
                                     Send
                                 </button>
 
