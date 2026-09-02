@@ -1,4 +1,5 @@
 export const timeOptions = [
+  { label: 'Select Time' },
   { value: '09:00', label: '09:00 AM' },
   { value: '09:30', label: '09:30 AM' },
   { value: '10:00', label: '10:00 AM' },

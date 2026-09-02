@@ -1,118 +1,193 @@
 import React, { useState } from 'react'
-import {FaLocationArrow} from "react-icons/fa";
+import { FaLocationArrow, FaPhoneAlt } from "react-icons/fa";
+import { MdEmail, MdTimer } from "react-icons/md";
 import InputField from './InputField';
 import Textarea from "../components/Textarea";
 
 const Contact = () => {
 
-    const [FromData , setFromData] = useState({
-        fullname:'',
-        email:'',
-        message:'',
-        subject:''
+    const [FormData, setFormData] = useState({
+        fullname: '',
+        email: '',
+        message: '',
+        subject: ''
     });
 
-    const handleChange = (e) =>{
-        const {name , value} =e.target;
-        setFromData((...prev)=>({
-            ...prev,[name]:value
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value
         }))
     }
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = (e) => {
         e.preventDefault();
-        setFromData({
+
+        console.log(FormData);
+
+        setFormData({
             fullname: '',
             email: '',
             message: '',
             subject: ''
         })
     }
+
     return (
-        <div id='contact' className='py-15 bg-white '>
-            <div className='container mx-auto px-6'>
+        <div
+            id='contact'
+            className='relative py-15 bg-cover bg-center bg-no-repeat'
+            style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByZWNlcHRpb258ZW58MHx8MHx8fDA%3D')"
+            }}
+        >
+
+            {/* Main Content */}
+            <div className='relative z-10 container mx-auto px-6'>
+
+                {/* Heading */}
                 <div className='text-center mb-12'>
-                    <h1 className='text-3xl text-black font-bold mb-4 underline underline-offset-2 decoration-red-600'>Lets's Talk</h1>
-                    <div></div>
-                    <p className='font-bold'>We'd love to hear from you</p>
+
+                    <h1 className='text-3xl sm:text-4xl text-black font-bold mb-4 underline underline-offset-4 decoration-red-600'>
+                        Let's Talk
+                    </h1>
+
+                    <p className='font-bold text-black'>
+                        We'd love to hear from you
+                    </p>
 
                 </div>
 
-                <div className='flex flex-col md:flex-row items-center justify-between'>
-                    
-                    {/*  left */}
-                    <div className='md:w-1/2  '>
-                     <div className='w-full overflow-hidden p-8'>
-                        <h1 className='text-2xl font-bold text-gray-700'>Get in Touch</h1>
-                        <div className='flex items-center gap-6 mb-6'>
-                            <div className='w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center'>
-                               <FaLocationArrow  />
+
+                <div className='flex flex-col md:flex-row items-center justify-between gap-10'>
+
+
+                    {/* ================= LEFT SIDE ================= */}
+
+                    <div className='md:w-1/2 w-50 bg-white rounded-2xl shadow-2xl'>
+
+                        <div className='w-full p-8'>
+
+                            <h1 className='text-2xl font-bold text-gray-700 mb-8'>
+                                Get in Touch
+                            </h1>
+
+
+                            {/* Address */}
+                            <div className='flex items-center gap-6 mb-6'>
+
+                                <div className='w-12 h-12 shrink-0 bg-red-600 text-white rounded-full flex items-center justify-center'>
+                                    <FaLocationArrow />
+                                </div>
+
+                                <div>
+                                    <p className='text-xl text-black font-semibold'>
+                                        Address
+                                    </p>
+
+                                    <p className='text-xl text-black font-semibold'>
+                                        Adarsh Colony
+                                    </p>
+                                </div>
+
                             </div>
 
-                            <div className='mt-4'>
-                                <p className='text-xl text-black font-semibold '>Address</p>
-                                <p className='text-xl text-black font-semibold '>Adarsh Colony</p>
+
+                            {/* Phone */}
+                            <div className='flex items-center gap-6 mb-6'>
+
+                                <div className='w-12 h-12 shrink-0 bg-red-600 text-white rounded-full flex items-center justify-center'>
+                                    <FaPhoneAlt />
+                                </div>
+
+                                <div>
+                                    <p className='text-xl text-black font-semibold'>
+                                        Phone
+                                    </p>
+
+                                    <p className='text-xl text-black font-semibold'>
+                                        1234567890
+                                    </p>
+                                </div>
+
                             </div>
 
-                            
+
+                            {/* Email */}
+                            <div className='flex items-center gap-6 mb-6'>
+
+                                <div className='w-12 h-12 shrink-0 bg-red-600 text-white rounded-full flex items-center justify-center'>
+                                    <MdEmail />
+                                </div>
+
+                                <div>
+                                    <p className='text-xl text-black font-semibold'>
+                                        Email
+                                    </p>
+
+                                    <p className='text-xl text-black font-semibold'>
+                                        Ayush@gmail.com
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            {/* Time */}
+                            <div className='flex items-start gap-6 mb-6'>
+
+                                <div className='w-12 h-12 shrink-0 bg-red-600 text-white rounded-full flex items-center justify-center'>
+                                    <MdTimer />
+                                </div>
+
+                                <div>
+
+                                    <p className='text-xl text-black font-semibold'>
+                                        Time
+                                    </p>
+
+                                    <p className='max-w-md text-black font-semibold leading-6'>
+                                        Monday - Thursday: 5:00 PM - 10:00 PM
+                                        <br />
+                                        Friday - Saturday: 5:00 PM - 11:00 PM
+                                        <br />
+                                        Sunday: 11:00 AM - 9:00 PM
+                                    </p>
+
+                                </div>
+
+                            </div>
+
                         </div>
 
-                        <div className='flex items-center gap-6 mb-6'>
-                            <div className='w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center'>
-                               <FaLocationArrow  />
-                            </div>
-
-                            <div className='mt-4'>
-                                <p className='text-xl text-black font-semibold '>Phone</p>
-                                <p className='text-xl text-black font-semibold '>1234567890</p>
-                            </div>
-
-                            
-                        </div>
-
-                        <div className='flex items-center gap-6 mb-6'>
-                            <div className='w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center'>
-                               <FaLocationArrow  />
-                            </div>
-
-                            <div className='mt-4'>
-                                <p className='text-xl text-black font-semibold '>Email</p>
-                                <p className='text-xl text-black font-semibold '>Ayush@gmail.com</p>
-                            </div>
-
-                        </div>
-
-                         <div className='flex items-center gap-6 mb-6'>
-                            <div className='w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center'>
-                               <FaLocationArrow  />
-                            </div>
-
-                            <div className='mt-4'>
-                                <p className='text-xl text-black font-semibold '>Hours</p>
-                                <p className='w-60 text-black font-semibold '>Monday - Thursday: 5:00 PM - 10:00 PM Friday - Saturday: 5:00 PM - 11:00 PM Sunday: 11:00 AM - 9:00 PM</p>
-                            </div>
-
-                        </div>
-                       
                     </div>
 
-                    </div>
 
-                    {/* for right  */}
-                    <div className='md:w-1/2  '>
-                        <div className='w-full overflow-hidden p-8'>
-                            <h1 className='text-2xl font-bold text-gray-700'>Send Message</h1>
+                    {/* ================= RIGHT SIDE ================= */}
+
+                    <div className='md:w-1/2 w-full bg-white rounded-2xl shadow-2xl'>
+
+                        <div className='w-full p-8'>
+
+                            <h1 className='text-2xl font-bold text-gray-700 mb-6'>
+                                Send Message
+                            </h1>
+
                             <form onSubmit={handleSubmit}>
 
-                                {/* full name field */}
+                                {/* Full Name */}
                                 <InputField
                                     label={"Full Name"}
-                                    name={"fullName"}
+                                    name={"fullname"}
                                     value={FormData.fullname}
                                     onChange={handleChange}
                                     placeholder={"Enter your name"}
                                 />
 
+
+                                {/* Email */}
                                 <InputField
                                     label={"Email Address"}
                                     name={"email"}
@@ -121,6 +196,8 @@ const Contact = () => {
                                     placeholder={"Enter your email"}
                                 />
 
+
+                                {/* Subject */}
                                 <InputField
                                     label={"Subject"}
                                     name={"subject"}
@@ -129,26 +206,34 @@ const Contact = () => {
                                     placeholder={"Enter your Subject"}
                                 />
 
-                                <Textarea 
-                                name={"message"}
-                                label={"Message"}
-                                value={FormData.message}
-                                onChange={handleChange}
-                                placeholder={"Enter message"}
+
+                                {/* Message */}
+                                <Textarea
+                                    name={"message"}
+                                    label={"Message"}
+                                    value={FormData.message}
+                                    onChange={handleChange}
+                                    placeholder={"Enter message"}
                                 />
 
-                            <button type='submit' className='font-semibold bg-red-600 text-white active:scale-95 px-4 py-2 rounded-full cursor-pointer '>Send</button>
+
+                                {/* Send Button */}
+                                <button
+                                    type='submit'
+                                    className='font-semibold bg-red-600 hover:bg-red-700 text-white active:scale-95 px-6 py-2.5 rounded-full cursor-pointer transition duration-200'
+                                >
+                                    Send
+                                </button>
+
                             </form>
+
                         </div>
 
                     </div>
 
-                    
                 </div>
 
-                
             </div>
-
 
         </div>
     )

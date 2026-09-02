@@ -3,25 +3,25 @@ import { FaFacebook, FaInstagram, FaLocationArrow, FaTwitter, FaWhatsapp } from 
 
 const Footer = () => {
     return (
-        <div className='py-15 bg-white'>
+        <div id='footer' className='py-2 bg-black '>
             <div className='container ma-auto px-6'>
-                <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+                <div className='grid grid-cols-1 md:grid-cols-4 gap-8 justify-evenly'>
 
                     {/* first */}
                     <div>
-                        <h1 className='font-semibold text-xl mb-4'>Fork&
+                        <h1 className='font-semibold text-xl mb-4 text-white'>Fork&
                             <span className='text-red-700'>Flame</span>
                         </h1>
-                        <p className='font-semibold'>
+                        <p className='font-semibold  text-white '>
                             Experience the finest culinary journey in the heart of the city.
                         </p>
                     </div>
 
                     {/* second */}
-                    <div>
-                        <h1 className='text-xl text-black font-semibold mb-4'>Quick Link</h1>
+                    <div className='text-center'>
+                        <h1 className='text-xl  text-white font-semibold mb-4'>Quick Link</h1>
 
-                        <ul className='font-semibold text-xl'>
+                        <ul className='font-semibold text-xl  text-white'>
 
                             <li>
                                 <a href="#home">Home</a>
@@ -47,8 +47,8 @@ const Footer = () => {
 
                     <div>
                         <h1 className='font-semibold text-xl
-                        mb-4'>Contact Info</h1>
-                        <p className='font-semibold text-black text-'>
+                        mb-4  text-white'>Contact Info</h1>
+                        <p className='font-semibold  text-white'>
                             123 Gourmet Street, NY 10001
                             (123) 456-7890
                             info@forkandflame.com
@@ -58,7 +58,7 @@ const Footer = () => {
                     {/* fourth */}
 
                     <div className=' items-center gap-4 mb-6'>
-                        <h1 className=' text-xl text-black font-semibold mb-4'>Follow Us</h1>
+                        <h1 className=' text-xl  text-white font-semibold mb-4'>Follow Us</h1>
 
                         <div className='flex items-center gap-4 mb-6'>
 
@@ -82,18 +82,18 @@ const Footer = () => {
                         </div>
 
                         <div>
-                            <h1 className='font-semibold text-xl text-black '>Subscribe to newsletter</h1>
+                            <h1 className='font-semibold text-xl text-white '>Subscribe to newsletter</h1>
 
-                            <div className='flex border rounded border-black'>
+                            <div className='flex border '>
 
                                 <input
                                 className=' w-full px-4 py-2
-                                text-black rounded outline
-                                placeholder-text-xs' 
+                                 text-black  rounded outline
+                                placeholder-text-xs bg-white' 
                                 type="email"
                                 placeholder='Your Email'
                                  />
-                                 <button className=' border-1 px-4 py-2 cursor-pointer bg-black text-white'>
+                                 <button className='  px-4 py-2 cursor-pointer  text-black bg-white'>
                                     <FaLocationArrow />
                                  </button>
 
@@ -107,11 +107,8 @@ const Footer = () => {
 
 
             </div>
-                © 2025 Fork&Flame. All rights reserved.
-
+                <p className='text-center text-white '>© 2025 Fork&Flame. All rights reserved.</p>
         </div>
-
-
     )
 }
 

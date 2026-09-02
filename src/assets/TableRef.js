@@ -1,4 +1,5 @@
 export const tableRefOptions = [
+  { label: 'Select Table' },
   { value: 'T1', label: 'Table 1' },
   { value: 'T2', label: 'Table 2' },
   { value: 'T3', label: 'Table 3' },

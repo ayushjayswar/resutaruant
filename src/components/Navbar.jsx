@@ -7,7 +7,7 @@ import { FaBars } from "react-icons/fa"
 const Navbar = () => {
 
     const [showMenu, setshowMenu] = useState()
-    
+
     return (
         <div className='shadow-md sticky top-0 z-50 backdrop-blur-3xl'>
             <div className='contianer mx-auto px-6 sm:px-8 md:px-12 lg:px-24'>
@@ -37,13 +37,16 @@ const Navbar = () => {
                         <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#contact">
                             Contact</a>
 
+                        <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#footer">
+                            More-Info</a>
+
                     </nav>
                     {/* mobile menu create  */}
                     <div className='md:hidden'>
                         {
                             showMenu ?
-                            <FaXmark onClick={()=> setshowMenu(!showMenu)} className='text-xl cursor-pointer '/>:
-                            <FaBars onClick={()=> setshowMenu(!showMenu)} className='text-xl cursor-pointer ' />
+                                <FaXmark onClick={() => setshowMenu(!showMenu)} className='text-xl cursor-pointer ' /> :
+                                <FaBars onClick={() => setshowMenu(!showMenu)} className='text-xl cursor-pointer ' />
                         }
                     </div>
 
@@ -52,23 +55,26 @@ const Navbar = () => {
             </div>
             {
                 showMenu && (
-                <div className='md:hidden flex flex-col items-center space-y-6 py-20 h-screen'>
-                     <a onClick={()=> setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#home">
+                    <div className='md:hidden flex flex-col items-center space-y-6 py-20 h-screen'>
+                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#home">
                             Home</a>
 
-                        <a onClick={()=> setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#about">
+                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#about">
                             About</a>
 
-                        <a onClick={()=> setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#menu">
+                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#menu">
                             Menu</a>
 
-                        <a onClick={()=> setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#reservation">
+                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#reservation">
                             Reservation</a>
 
-                        <a onClick={()=> setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 transition-all active:scale-95' href="#contact">
+                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 transition-all active:scale-95' href="#contact">
                             Contact</a>
 
-                </div>
+                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 transition-all active:scale-95' href="#footer">
+                            More-Info</a>
+
+                    </div>
 
                 )
             }

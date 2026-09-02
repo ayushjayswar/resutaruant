@@ -1,5 +1,6 @@
 export const partySizeOptions = [
-  { value: '1', label: '1 Person' },
+  { label: 'Select People' },
+  { value: '1', label: '1 People' },
   { value: '2', label: '2 People' },
   { value: '3', label: '3 People' },
   { value: '4', label: '4 People' },
