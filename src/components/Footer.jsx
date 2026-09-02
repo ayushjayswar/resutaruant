@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaLocationArrow, FaTwitter, FaWhatsapp } from 
 
 const Footer = () => {
     return (
-        <div id='footer' className='py-2 bg-black '>
+        <div className='py-2 bg-black '>
             <div className='container ma-auto px-6'>
                 <div className='grid grid-cols-1 md:grid-cols-4 gap-8 justify-evenly'>
 

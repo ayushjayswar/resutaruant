@@ -37,8 +37,7 @@ const Navbar = () => {
                         <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#contact">
                             Contact</a>
 
-                        <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#footer">
-                            More-Info</a>
+                      
 
                     </nav>
                     {/* mobile menu create  */}
