@@ -36,6 +36,7 @@ const Reservation = () => {
     e.preventDefault();
     setBookingData(formData);
     setIsModalOpen(true);
+
     setFormData({
       date: '',
       fullName: '',
@@ -55,7 +56,7 @@ const Reservation = () => {
   return (
     <div
       id='reservation'
-      className='relative min-h-screen w-full overflow-hidden py-12'
+      className='relative min-h-screen w-full overflow-hidden py-12 flex items-center justify-center'
     >
 
       {/* Background Image */}
@@ -70,14 +71,13 @@ const Reservation = () => {
       {/* Dark Overlay */}
       <div className='absolute inset-0 bg-black/40'></div>
 
-      {/* Main Content */}
-      <div className='relative z-10 container mx-auto px-4 sm:px-6'>
+      {/* Main Content — centered */}
+      <div className='relative z-10 container mx-auto px-4 sm:px-6 flex justify-center'>
 
-        {/* Left Side Content */}
-        <div className='max-w-2xl mr-auto ml-0'>
+        <div className='max-w-2xl w-full mx-auto'>
 
           {/* Heading + Description */}
-          <div className='text-left mb-6 bg-black/50 backdrop-blur-md p-5 sm:p-6 rounded-2xl shadow-2xl border border-white/20'>
+          <div className='text-center mb-6 bg-black/50 backdrop-blur-md p-5 sm:p-6 rounded-2xl shadow-2xl border border-white/20'>
             <h1 className='text-2xl sm:text-3xl font-bold text-white underline underline-offset-4 decoration-red-500'>
               Make a Reservation
             </h1>
@@ -87,7 +87,7 @@ const Reservation = () => {
           </div>
 
           {/* Reservation Form */}
-          <div className='bg-white/95 backdrop-blur-sm p-5 sm:p-6 md:p-8 rounded-2xl shadow-2xl border border-white/30'>
+          <div className='relative bg-white/95 backdrop-blur-sm p-5 sm:p-6 md:p-8 rounded-2xl shadow-2xl border border-white/30'>
             <form onSubmit={handleSubmit}>
 
               <div className='grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4'>

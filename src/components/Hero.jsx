@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
 
 const Hero = () => {
 
   const heading = "Experience Fine Dining";
   const words = heading.split(" ");
+
+  const [animKey, setAnimKey] = useState(0);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#home') {
+        setAnimKey(prev => prev + 1);
+      }
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   return (
     <div id='home' className='relative h-screen bg-cover 
@@ -13,7 +26,7 @@ const Hero = () => {
 
          <div className='absolute inset-0 bg-black opacity-80'>
                 <div className='container mx-auto px-6 h-full flex items-center z-10 relative'>
-                  <div className='text-white max-w-2xl'>
+                  <div className='text-white max-w-2xl' key={animKey}>
 
                     <h2 className='font-bold mb-4 text-5xl tracking-tight flex flex-wrap gap-x-3'>
                       {words.map((word, i) => (
@@ -42,7 +55,7 @@ const Hero = () => {
                       href='#reservation'
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 2 }}
+                      transition={{ duration: 0.6, delay: 1.1 }}
                     >
                       Book a Table
                     </motion.a>
