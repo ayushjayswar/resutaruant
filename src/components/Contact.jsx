@@ -45,7 +45,7 @@ const Contact = () => {
         >
 
             {/* Main Content */}
-            <div className='relative z-10 container mx-auto px-6'>
+            <div className='relative z-10 container mx-auto px-4 sm:px-6'>
 
                 {/* Heading */}
                 <div className='text-center mb-12'>
@@ -66,9 +66,9 @@ const Contact = () => {
 
                     {/* ================= LEFT SIDE ================= */}
 
-                    <div className='md:w-1/2 w-50 bg-white rounded-2xl shadow-2xl'>
+                    <div className='w-full md:w-1/2 bg-white rounded-2xl shadow-2xl'>
 
-                        <div className='w-full p-8'>
+                        <div className='w-full p-6 sm:p-8'>
 
                             <h1 className='text-2xl font-bold text-gray-700 mb-8'>
                                 Get in Touch
@@ -83,11 +83,11 @@ const Contact = () => {
                                 </div>
 
                                 <div>
-                                    <p className='text-xl text-black font-semibold'>
+                                    <p className='text-base sm:text-xl text-black font-semibold'>
                                         Address
                                     </p>
 
-                                    <p className='text-xl text-black font-semibold'>
+                                    <p className='text-base sm:text-xl text-black font-semibold'>
                                         Adarsh Colony
                                     </p>
                                 </div>
@@ -103,11 +103,11 @@ const Contact = () => {
                                 </div>
 
                                 <div>
-                                    <p className='text-xl text-black font-semibold'>
+                                    <p className='text-base sm:text-xl text-black font-semibold'>
                                         Phone
                                     </p>
 
-                                    <p className='text-xl text-black font-semibold'>
+                                    <p className='text-base sm:text-xl text-black font-semibold'>
                                         1234567890
                                     </p>
                                 </div>
@@ -123,11 +123,11 @@ const Contact = () => {
                                 </div>
 
                                 <div>
-                                    <p className='text-xl text-black font-semibold'>
+                                    <p className='text-base sm:text-xl text-black font-semibold'>
                                         Email
                                     </p>
 
-                                    <p className='text-xl text-black font-semibold'>
+                                    <p className='text-base sm:text-xl text-black font-semibold break-all'>
                                         Ayush@gmail.com
                                     </p>
                                 </div>
@@ -144,11 +144,11 @@ const Contact = () => {
 
                                 <div>
 
-                                    <p className='text-xl text-black font-semibold'>
+                                    <p className='text-base sm:text-xl text-black font-semibold'>
                                         Time
                                     </p>
 
-                                    <p className='max-w-md text-black font-semibold leading-6'>
+                                    <p className='max-w-md text-sm sm:text-base text-black font-semibold leading-6'>
                                         Monday - Thursday: 5:00 PM - 10:00 PM
                                         <br />
                                         Friday - Saturday: 5:00 PM - 11:00 PM
@@ -167,9 +167,9 @@ const Contact = () => {
 
                     {/* ================= RIGHT SIDE ================= */}
 
-                    <div className='md:w-1/2 w-full bg-white rounded-2xl shadow-2xl'>
+                    <div className='w-full md:w-1/2 bg-white rounded-2xl shadow-2xl'>
 
-                        <div className='w-full p-8'>
+                        <div className='w-full p-6 sm:p-8'>
 
                             <h1 className='text-2xl font-bold text-gray-700 mb-6'>
                                 Send Message

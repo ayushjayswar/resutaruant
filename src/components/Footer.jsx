@@ -71,7 +71,7 @@ const Footer = () => {
                             </div>
 
                             <div className='w-12 h-12 text-white bg-red-600 rounded-full flex items-center justify-center'>
-                                <FaInstagram />
+                               <a href="https://www.instagram.com/rashmika_mandanna/?hl=en"><FaInstagram /></a> 
                             </div>
 
                             <div className='w-12 h-12 text-white bg-red-600 rounded-full flex items-center justify-center'>
