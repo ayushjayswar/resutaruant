@@ -71,7 +71,6 @@ const Navbar = () => {
                         <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 transition-all active:scale-95' href="#contact">
                             Contact</a>
 
-                        
 
                     </div>
 
