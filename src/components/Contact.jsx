@@ -219,8 +219,9 @@ const Contact = () => {
 
                                 {/* Send Button */}
 
-                                <button className="relative px-8 py-3 rounded-lg bg-red-600 isolation-auto z-10 border-2 border-red-700 before:absolute before:w-full before:transition-all before:duration-700 before:-right-full before:hover:right-0 before:rounded-full before:bg-green-600 before:z-0 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 inline-flex items-center justify-center text-sm font-bold text-black shadow-sm gap-x-2 disabled:opacity-50 disabled:pointer-events-none">
+                                <button className="group relative overflow-hidden px-8 py-3 rounded-lg bg-red-600 border-2 border-red-700 inline-flex items-center justify-center text-sm font-bold text-black shadow-sm gap-x-2 transition-all duration-300">
                                     <span className="relative z-10">Send</span>
+                                    <span className="absolute w-0 h-0 rounded-full bg-green-600 group-hover:w-[300%] group-hover:h-[500%] transition-all duration-700"></span>
                                 </button>
 
                             </form>
