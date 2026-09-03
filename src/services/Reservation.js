@@ -1,11 +1,13 @@
 import emailjs from '@emailjs/browser';
 
-const RESERVATION_SERVICE_ID = 'manu_project2';
+const SERVICE_ID = 'manu_project2';
 const RESERVATION_TEMPLATE_ID = 'manu_project2';
-const RESERVATION_PUBLIC_KEY = 'leo2_XGg1E-aR4lBo';
+const PUBLIC_KEY = 'leo2_XGg1E-aR4lBo';
+
+const OWNER_EMAIL = 'bgmigaming06012005@gmail.com';
 
 export const sendReservation = (formData) => {
-    const templateParams = {
+    const baseParams = {
         date: formData.date,
         time: formData.time,
         partySize: formData.partySize,
@@ -16,5 +18,9 @@ export const sendReservation = (formData) => {
         feedback: formData.feedback,
         submittedAt: new Date().toLocaleString(),
     };
-    return emailjs.send(RESERVATION_SERVICE_ID, RESERVATION_TEMPLATE_ID, templateParams, RESERVATION_PUBLIC_KEY);
+
+    return Promise.all([
+        emailjs.send(SERVICE_ID, RESERVATION_TEMPLATE_ID, { ...baseParams, to_email: OWNER_EMAIL }, PUBLIC_KEY),
+        emailjs.send(SERVICE_ID, RESERVATION_TEMPLATE_ID, { ...baseParams, to_email: formData.email }, PUBLIC_KEY),
+    ]);
 };
