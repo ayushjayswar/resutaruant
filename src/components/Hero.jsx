@@ -52,7 +52,7 @@ const Hero = () => {
 
                     <motion.a
                       className='inline-block bg-red-700 rounded-full px-8 py-3 cursor-pointer hover:bg-red-900 transition duration-300 transform active:scale-95'
-                      href='#reservation'
+                      href='/reservation'
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 1.1 }}

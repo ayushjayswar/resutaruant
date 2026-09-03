@@ -22,19 +22,19 @@ const Navbar = () => {
                     </div>
                     {/* nav link */}
                     <nav className=' hidden md:flex  item-center space-x-6 text-blue-950'>
-                        <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#home">
+                        <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/">
                             Home</a>
 
-                        <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#about">
+                        <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/about">
                             About</a>
 
-                        <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#menu">
+                        <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/menu">
                             Menu</a>
 
-                        <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#reservation">
+                        <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/reservation">
                             Reservation</a>
 
-                        <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#contact">
+                        <a className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/contact">
                             Contact</a>
 
                       
