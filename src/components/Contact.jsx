@@ -29,7 +29,7 @@ const Contact = () => {
         e.preventDefault();
 
         if (!FormData.fullname || !FormData.email || !FormData.subject || !FormData.message) {
-            alert("Please fill all fields");
+            alert("Please fill all infomation");
             return;
         }
 
@@ -57,7 +57,7 @@ const Contact = () => {
     return (
         <div
             id='contact'
-            className='relative py-15 bg-cover bg-center bg-no-repeat'
+            className=' required relative py-15 bg-cover bg-center bg-no-repeat'
             style={{
                 backgroundImage: "url('https://images.unsplash.com/photo-1621293954908-907159247fc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByZWNlcHRpb258ZW58MHx8MHx8fDA%3D')"
             }}

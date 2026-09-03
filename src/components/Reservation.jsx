@@ -58,7 +58,7 @@ const Reservation = () => {
       })
       .catch((err) => {
         console.error('EmailJS Error:', err);
-        alert('Failed to send reservation. Please try again.');
+        alert('Fill the proper information. Please try again.');
       })
       .finally(() => {
         setLoading(false);
@@ -72,7 +72,7 @@ const Reservation = () => {
   return (
     <div
       id='reservation'
-      className='relative min-h-screen w-full overflow-hidden py-12 flex items-center justify-center'
+      className='required relative min-h-screen w-full overflow-hidden py-12 flex items-center justify-center'
     >
 
       {/* Background Image */}
