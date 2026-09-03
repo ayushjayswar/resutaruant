@@ -23,20 +23,20 @@ const Footer = () => {
                         <h1 className='text-lg text-white font-semibold mb-4'>Quick Links</h1>
                         <ul className='space-y-2 text-sm text-gray-400'>
                             <li>
-                                <Link to="#home" className='hover:text-red-600 transition-colors duration-200'>Home</Link>
+                                <Link to="/" className='hover:text-red-600 transition-colors duration-200'>Home</Link>
                             </li>
                             <li>
-                                <Link to="#about" className='hover:text-red-600 transition-colors duration-200'>About</Link>
+                                <Link to="/about" className='hover:text-red-600 transition-colors duration-200'>About</Link>
                             </li>
                             <li>
-                                <Link to="#menu" className='hover:text-red-600 transition-colors duration-200'>Menu</Link>
+                                <Link to="/menu" className='hover:text-red-600 transition-colors duration-200'>Menu</Link>
                             </li>
                             <li>
-                                <Link to="#room-booking" className='hover:text-red-600 transition-colors duration-200'>Room-Booking</Link>
+                                <Link to="/room-booking" className='hover:text-red-600 transition-colors duration-200'>Room-Booking</Link>
                             </li>
 
                             <li>
-                                <Link to="#reservation" className='hover:text-red-600 transition-colors duration-200'>Table-Reservation</Link>
+                                <Link to="/reservation" className='hover:text-red-600 transition-colors duration-200'>Table-Reservation</Link>
                             </li>
                         </ul>
                     </div>
