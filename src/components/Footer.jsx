@@ -1,114 +1,96 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLocationArrow, FaTwitter, FaWhatsapp } from 'react-icons/fa'
 
 const Footer = () => {
     return (
-        <div className='py-2 bg-black '>
-            <div className='container ma-auto px-6'>
-                <div className='grid grid-cols-1 md:grid-cols-4 gap-8 justify-evenly'>
+        <footer className='bg-black border-t border-gray-800'>
+            <div className='container mx-auto px-6 py-12'>
+                <div className='grid grid-cols-1 md:grid-cols-4 gap-10'>
 
                     {/* first */}
                     <div>
-                        <h1 className='font-semibold text-xl mb-4 text-white'>Fork&
-                            <span className='text-red-700'>Flame</span>
+                        <h1 className='font-bold text-2xl mb-4 text-white'>
+                            Fork&<span className='text-red-600'>Flame</span>
                         </h1>
-                        <p className='font-semibold  text-white '>
+                        <p className='text-gray-400 text-sm leading-relaxed'>
                             Experience the finest culinary journey in the heart of the city.
                         </p>
                     </div>
 
                     {/* second */}
-                    <div >
-                        <h1 className='text-xl  text-white font-semibold mb-4'>Quick Link</h1>
-
-                        <ul className='font-semibold text-xl  text-white'>
-
+                    <div>
+                        <h1 className='text-lg text-white font-semibold mb-4'>Quick Links</h1>
+                        <ul className='space-y-2 text-sm text-gray-400'>
                             <li>
-                                <a href="#home">Home</a>
+                                <Link to="#home" className='hover:text-red-600 transition-colors duration-200'>Home</Link>
+                            </li>
+                            <li>
+                                <Link to="#about" className='hover:text-red-600 transition-colors duration-200'>About</Link>
+                            </li>
+                            <li>
+                                <Link to="#menu" className='hover:text-red-600 transition-colors duration-200'>Menu</Link>
+                            </li>
+                            <li>
+                                <Link to="#room-booking" className='hover:text-red-600 transition-colors duration-200'>Room-Booking</Link>
                             </li>
 
                             <li>
-                                <a href="#about">About</a>
+                                <Link to="#reservation" className='hover:text-red-600 transition-colors duration-200'>Table-Reservation</Link>
                             </li>
-
-                            <li>
-                                <a href="#menu">Menu</a>
-                            </li>
-
-                            <li>
-                                <a href="#reservation">Reservation</a>
-                            </li>
-
-
                         </ul>
                     </div>
 
                     {/* third */}
-
                     <div>
-                        <h1 className='font-semibold text-xl
-                        mb-4  text-white'>Contact Info</h1>
-                        <p className='font-semibold  text-white'>
-                            123 Gourmet Street, NY 10001
-                            (123) 456-7890
-                            info@forkandflame.com
-                        </p>
+                        <h1 className='text-lg text-white font-semibold mb-4'>Contact Info</h1>
+                        <ul className='space-y-2 text-sm text-gray-400'>
+                            <li>123 Gourmet Street, NY 10001</li>
+                            <li>(123) 456-7890</li>
+                            <li>info@forkandflame.com</li>
+                        </ul>
                     </div>
 
                     {/* fourth */}
-
-                    <div className=' items-center gap-4 mb-6'>
-                        <h1 className=' text-xl  text-white font-semibold mb-4'>Follow Us</h1>
-
-                        <div className='flex items-center gap-4 mb-6'>
-
-                            <div className='w-12 h-12 text-white bg-red-600 rounded-full flex items-center justify-center'>
+                    <div>
+                        <h1 className='text-lg text-white font-semibold mb-4'>Follow Us</h1>
+                        <div className='flex items-center gap-3 mb-6'>
+                            <a href="#" className='w-10 h-10 text-white bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors duration-200'>
                                 <FaFacebook />
-                            </div>
-
-                            <div className='w-12 h-12 text-white bg-red-600 rounded-full flex items-center justify-center'>
+                            </a>
+                            <a href="#" className='w-10 h-10 text-white bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors duration-200'>
                                 <FaTwitter />
-                            </div>
-
-                            <div className='w-12 h-12 text-white bg-red-600 rounded-full flex items-center justify-center'>
-                               <a href="https://www.instagram.com/rashmika_mandanna/?hl=en"><FaInstagram /></a> 
-                            </div>
-
-                            <div className='w-12 h-12 text-white bg-red-600 rounded-full flex items-center justify-center'>
+                            </a>
+                            <a href="https://www.instagram.com/rashmika_mandanna/?hl=en" target="_blank" rel="noopener noreferrer" className='w-10 h-10 text-white bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors duration-200'>
+                                <FaInstagram />
+                            </a>
+                            <a href="#" className='w-10 h-10 text-white bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors duration-200'>
                                 <FaWhatsapp />
-                            </div>
-
-
+                            </a>
                         </div>
 
-                        <div>
-                            <h1 className='font-semibold text-xl text-white '>Subscribe to newsletter</h1>
-
-                            <div className='flex border '>
-
-                                <input
-                                className=' w-full px-4 py-2
-                                 text-black  rounded outline
-                                placeholder-text-xs bg-white' 
+                        <h2 className='text-sm text-white font-semibold mb-2'>Subscribe to newsletter</h2>
+                        <div className='flex rounded overflow-hidden'>
+                            <input
+                                className='w-full px-3 py-2 text-sm text-black bg-white outline-none placeholder-gray-500'
                                 type="email"
                                 placeholder='Your Email'
-                                 />
-                                 <button className='  px-4 py-2 cursor-pointer  text-black bg-white'>
-                                    <FaLocationArrow />
-                                 </button>
-
-                            </div>
+                            />
+                            <button className='px-4 py-2 cursor-pointer text-white bg-red-600 hover:bg-red-700 transition-colors duration-200'>
+                                <FaLocationArrow />
+                            </button>
                         </div>
-
                     </div>
-
 
                 </div>
 
-
+                <div className='border-t border-gray-800 mt-10 pt-6'>
+                    <p className='text-center text-gray-400 text-sm'>
+                        © 2025 Fork&Flame. All rights reserved.
+                    </p>
+                </div>
             </div>
-                <p className='text-center text-white '>© 2025 Fork&Flame. All rights reserved.</p>
-        </div>
+        </footer>
     )
 }
 
