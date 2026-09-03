@@ -6,6 +6,7 @@ import { partySizeOptions } from "../assets/PartySize";
 import { tableRefOptions } from "../assets/TableRef";
 import Textarea from "../components/Textarea";
 import BookingModal from '../components/BookingModal';
+import { sendReservation } from '../services/Reservation';
 
 const Reservation = () => {
 
@@ -24,6 +25,8 @@ const Reservation = () => {
 
   const [bookingData, setBookingData] = useState(null);
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -34,19 +37,32 @@ const Reservation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setBookingData(formData);
-    setIsModalOpen(true);
 
-    setFormData({
-      date: '',
-      fullName: '',
-      phone: '',
-      email: '',
-      feedback: '',
-      time: '',
-      partySize: '',
-      tableRef: '',
-    });
+    setLoading(true);
+
+    sendReservation(formData)
+      .then(() => {
+        setBookingData(formData);
+        setIsModalOpen(true);
+
+        setFormData({
+          date: '',
+          fullName: '',
+          phone: '',
+          email: '',
+          feedback: '',
+          time: '',
+          partySize: '',
+          tableRef: '',
+        });
+      })
+      .catch((err) => {
+        console.error('EmailJS Error:', err);
+        alert('Failed to send reservation. Please try again.');
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   const closeModal = () => {
@@ -165,9 +181,10 @@ const Reservation = () => {
 
               <button
                 type='submit'
-                className='mt-6 w-full bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full px-6 py-2.5 shadow-lg hover:shadow-xl active:scale-[0.98] transition-all duration-200 cursor-pointer'
+                disabled={loading}
+                className='mt-6 w-full bg-red-600 hover:bg-red-700 text-white font-semibold rounded-full px-6 py-2.5 shadow-lg hover:shadow-xl active:scale-[0.98] transition-all duration-200 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed'
               >
-                Confirm Reservation
+                {loading ? "Sending..." : "Confirm Reservation"}
               </button>
 
             </form>
