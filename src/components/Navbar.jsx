@@ -55,19 +55,19 @@ const Navbar = () => {
             {
                 showMenu && (
                     <div className='md:hidden flex flex-col items-center space-y-6 py-20 h-screen'>
-                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#home">
+                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/">
                             Home</a>
 
-                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#about">
+                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/about">
                             About</a>
 
-                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#menu">
+                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/menu">
                             Menu</a>
 
-                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="#reservation">
+                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/reservation">
                             Reservation</a>
 
-                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 transition-all active:scale-95' href="#contact">
+                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 transition-all active:scale-95' href="/contact">
                             Contact</a>
 
 
