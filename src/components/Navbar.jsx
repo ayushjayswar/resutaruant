@@ -31,11 +31,16 @@ const Navbar = () => {
                         <Link className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' to="/menu">
                             Menu</Link>
 
+                        <Link className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' to="/roombooking">
+                            Room-Booking</Link>
+
                         <Link className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' to="/reservation">
-                            Reservation</Link>
+                            Table-Reservation</Link>
 
                         <Link className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' to="/contact">
                             Contact</Link>
+
+                        
 
                       
 
@@ -64,11 +69,17 @@ const Navbar = () => {
                         <Link onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' to="/menu">
                             Menu</Link>
 
+                         <Link onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 transition-all active:scale-95' to="/roombooking">
+                            Room-Booking</Link>
+
                         <Link onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' to="/reservation">
-                            Reservation</Link>
+                            Table-Reservation</Link>
+
 
                         <Link onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 transition-all active:scale-95' to="/contact">
-                            Contact</Link>
+                            Contact</Link> 
+
+                       
 
 
                     </div>

@@ -7,6 +7,7 @@ import About from './components/About';
 import Menu from './components/Menu';
 import Reservation from './components/Reservation';
 import Contact from './components/Contact';
+import RoomBooking from './components/RoomBooking';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/about' element={<About/>}/>
         <Route path='/menu' element={<Menu/>}/>
         <Route path='/reservation' element={<Reservation/>}/>
+        <Route path='/roombooking' element={<RoomBooking/>}/>
         <Route path='/contact' element={<Contact/>}/>
 
       </Routes>
