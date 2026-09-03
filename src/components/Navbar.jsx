@@ -55,20 +55,20 @@ const Navbar = () => {
             {
                 showMenu && (
                     <div className='md:hidden flex flex-col items-center space-y-6 py-20 h-screen'>
-                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/">
-                            Home</a>
+                        <Link onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' to="/">
+                            Home</Link>
 
-                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/about">
-                            About</a>
+                        <Link onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' to="/about">
+                            About</Link>
 
-                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/menu">
-                            Menu</a>
+                        <Link onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' to="/menu">
+                            Menu</Link>
 
-                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' href="/reservation">
-                            Reservation</a>
+                        <Link onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 active:scale-95' to="/reservation">
+                            Reservation</Link>
 
-                        <a onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 transition-all active:scale-95' href="/contact">
-                            Contact</a>
+                        <Link onClick={() => setshowMenu(!showMenu)} className='font-semibold  hover:text-red-600 hover:scale-110 duration-300 transition-all active:scale-95' to="/contact">
+                            Contact</Link>
 
 
                     </div>
